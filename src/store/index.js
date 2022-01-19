@@ -17,12 +17,14 @@ export default createStore({
   actions: {
     async fetchSearch(context) {
       const { state } = context;
+      context.commit('updateLoading');
       try {
         const response = await HTTP.get(
           `/search/photos?query=${state.searchValue}&per_page=${
             state.per_page
           }&page=${1}`
         );
+        context.commit('updateLoading');
       } catch (e) {
         state.errors.push(e);
       }
