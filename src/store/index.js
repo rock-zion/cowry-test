@@ -17,6 +17,10 @@ export default createStore({
       state.searchValue = newSearchValue;
     },
 
+    updateLoading(state) {
+      state.loading = !state.loading;
+    },
+
     clearImageData(state) {
       state.imageData = [];
     },
@@ -45,10 +49,12 @@ export default createStore({
 
     async addMoreImages(context) {
       const { state } = context;
+      context.commit('updateLoading');
       try {
         const response = await HTTP.get(
           `/search/photos?query=${state.searchValue}&per_page=${state.per_page}&page=${state.page}`
         );
+        context.commit('updateLoading');
         context.commit('updateImageData', response);
       } catch (e) {
         state.errors.push(e);
