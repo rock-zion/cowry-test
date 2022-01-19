@@ -40,4 +40,32 @@
 </script>
 <style lang="scss" scoped>
   .modal_overlay {
+  .portrait_wrapper {
+    height: 80%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+    background: rgba($color: #000000, $alpha: 0.5);
+  }
+
+  .landscape_wrapper {
+    height: 80%;
+    width: 100%;
+    overflow: hidden;
+  }
+
+  .landscape_image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .portrait_image {
+    height: 100%;
+  }
+
+  .user_wrapper {
+    margin-top: 20px;
+  }
 </style>
