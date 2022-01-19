@@ -1,4 +1,11 @@
 <template>
+  <div @click="toggleModal(data)" class="img_wrapper">
+    <img :alt="description" :src="img" />
+    <div class="name_wrapper">
+      <span>{{ name }}</span>
+      <span>{{ location }}</span>
+    </div>
+  </div>
 </template>
 
 <script>
