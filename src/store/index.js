@@ -21,6 +21,10 @@ export default createStore({
       state.loading = !state.loading;
     },
 
+    updatePage(state) {
+      state.page = state.page + 1;
+    },
+
     updateSingleImageData(state, payload) {
       console.log(payload);
       state.singleImageData = payload;
