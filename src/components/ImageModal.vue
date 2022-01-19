@@ -1,8 +1,15 @@
 <template>
+        <ProfileImage
+          :location="imageObject?.user?.location"
+          :name="imageObject?.user?.name"
+          :img="imageObject?.user?.profile_image?.medium"
+        />
 </template>
 <script>
+  import ProfileImage from './ProfileImage.vue';
   export default {
     name: 'ImageModal',
+    components: { ProfileImage },
   };
 </script>
 <style lang="scss" scoped>
