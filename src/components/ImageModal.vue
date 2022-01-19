@@ -19,6 +19,9 @@
         this.$store.commit('updateModal');
       },
     },
+    mounted() {
+      this.imageObject = this.$store.state.singleImageData;
+    },
     components: { ProfileImage },
   };
 </script>
