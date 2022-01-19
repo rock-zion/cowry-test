@@ -1,4 +1,5 @@
 import { createStore } from 'vuex'
+import { createStore } from 'vuex';
 import { HTTP } from '../utils/https-common';
 
 export default createStore({
