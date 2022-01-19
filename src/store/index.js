@@ -29,11 +29,13 @@ export default createStore({
           }&page=${1}`
         );
         context.commit('updateLoading');
+        context.commit('updateImageData', response);
       } catch (e) {
         state.errors.push(e);
       }
     },
 
+        context.commit('updateImageData', response);
   },
   modules: {
   }
