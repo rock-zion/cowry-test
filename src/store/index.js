@@ -35,6 +35,10 @@ export default createStore({
       state.per_page = payload;
     },
 
+    updateModal(state, payload) {
+      state.displayModal = !state.displayModal;
+    },
+
     clearImageData(state) {
       state.imageData = [];
     },
