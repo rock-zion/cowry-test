@@ -20,6 +20,16 @@ import HelloWorld from './components/HelloWorld.vue'
       ImageModal,
     },
 
+    computed: {
+      pageValue: {
+        get() {
+          return this.$store.state.searchValue;
+        },
+        set(newPageValue) {
+          this.$store.dispatch('addMoreImages');
+        },
+      },
+    },
 
 export default {
   name: 'App',
