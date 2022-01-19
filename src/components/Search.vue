@@ -15,6 +15,15 @@
 <script>
   export default {
     name: 'Search',
+    computed: {
+      searchValue: {
+        get() {
+          return this.$store.state.searchValue;
+        },
+        set(newSearchValue) {
+        },
+      },
+    },
   };
 </script>
 
