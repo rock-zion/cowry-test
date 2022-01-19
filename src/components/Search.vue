@@ -36,4 +36,23 @@
 </script>
 
 <style lang="scss" scoped>
+  .search_form {
+    width: 70%;
+    max-width: 1000px;
+    height: 64px;
+    margin: auto;
+  }
+
+  input {
+    width: 100%;
+    height: inherit;
+    margin: 0 auto;
+    font-size: 24px;
+    padding-left: 16px;
+    border-radius: 10px;
+  }
+
+  .searching_indicator {
+    color: white;
+  }
 </style>
