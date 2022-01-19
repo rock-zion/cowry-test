@@ -15,6 +15,13 @@
 <script>
   export default {
     name: 'Search',
+    methods: {
+      handleSubmit() {
+        this.$store.commit('clearImageData');
+        this.$store.commit('updatePerPage', 12);
+        this.$store.dispatch('fetchSearch');
+      },
+    },
     computed: {
       searchValue: {
         get() {
