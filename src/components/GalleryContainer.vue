@@ -19,9 +19,15 @@
 </template>
 
 <script>
+  import PictureThumbnail from './PictureThumbnail.vue';
+  import ThumbnailLoading from './ThumbnailLoading.vue';
 
   export default {
     name: 'GalleryContainer',
+    components: {
+      PictureThumbnail,
+      ThumbnailLoading,
+    },
   };
 </script>
 
