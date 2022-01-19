@@ -20,4 +20,26 @@
   };
 </script>
 <style lang="scss" scoped>
+  .wrapper {
+    display: flex;
+    align-items: center;
+  }
+
+  .img_wrapper {
+    width: 40px;
+    height: 40px;
+    border-radius: 100%;
+    overflow: hidden;
+  }
+
+  .img_wrapper img {
+    width: 100%;
+    height: 100%;
+  }
+
+  .name_wrapper {
+    display: inherit;
+    flex-direction: column;
+    margin-left: 8px;
+  }
 </style>
