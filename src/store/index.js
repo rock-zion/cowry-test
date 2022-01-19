@@ -21,6 +21,11 @@ export default createStore({
       state.loading = !state.loading;
     },
 
+    updateSingleImageData(state, payload) {
+      console.log(payload);
+      state.singleImageData = payload;
+    },
+
     clearImageData(state) {
       state.imageData = [];
     },
