@@ -21,7 +21,11 @@ export default createStore({
       state.imageData = [];
     },
 
+    updateImageData(state, payload) {
+      state.imageData.push(...payload.data.results);
+    },
   },
+
   actions: {
     async fetchSearch(context) {
       const { state } = context;
