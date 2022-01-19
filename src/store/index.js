@@ -31,6 +31,10 @@ export default createStore({
       state.singleImageData = payload;
     },
 
+    updatePerPage(state, payload) {
+      state.per_page = payload;
+    },
+
     clearImageData(state) {
       state.imageData = [];
     },
