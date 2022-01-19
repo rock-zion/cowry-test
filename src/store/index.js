@@ -35,7 +35,17 @@ export default createStore({
       }
     },
 
+    async addMoreImages(context) {
+      const { state } = context;
+      try {
+        const response = await HTTP.get(
+          `/search/photos?query=${state.searchValue}&per_page=${state.per_page}&page=${state.page}`
+        );
         context.commit('updateImageData', response);
+      } catch (e) {
+        state.errors.push(e);
+      }
+    },
   },
   modules: {
   }
