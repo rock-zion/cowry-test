@@ -24,6 +24,18 @@ export default {
       window.removeEventListener('scroll', this.handleScroll);
     },
 
+    methods: {
+      handleScroll() {
+        let bottomOfWindow =
+          document.documentElement.scrollTop + window.innerHeight ===
+          document.documentElement.offsetHeight;
+        if (bottomOfWindow) {
+          this.$store.commit('updatePage');
+          this.$store.dispatch('addMoreImages');
+        }
+      },
+    },
+  };
 </script>
 
 <style lang="scss">
