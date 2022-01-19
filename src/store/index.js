@@ -13,6 +13,10 @@ export default createStore({
     displayModal: false,
   },
   mutations: {
+    setSearchValue(state, newSearchValue) {
+      state.searchValue = newSearchValue;
+    },
+
   },
   actions: {
     async fetchSearch(context) {
