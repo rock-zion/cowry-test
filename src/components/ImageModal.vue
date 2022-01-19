@@ -14,6 +14,11 @@
         imageObject: {},
       };
     },
+    methods: {
+      toggleModal() {
+        this.$store.commit('updateModal');
+      },
+    },
     components: { ProfileImage },
   };
 </script>
