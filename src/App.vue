@@ -12,6 +12,9 @@ export default {
     HelloWorld
   }
 }
+    mounted() {
+      this.$store.dispatch('fetchSearch');
+    },
 </script>
 
 <style lang="scss">
