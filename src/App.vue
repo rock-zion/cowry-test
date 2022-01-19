@@ -62,6 +62,31 @@ export default {
   color: #2c3e50;
   margin-top: 60px;
 }
+<style>
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+  }
+
+  #app {
+    font-family: 'Poppins', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  input {
+    outline: none;
+    border: none;
+  }
+
+  .container_parent {
+    width: 100%;
+    position: relative;
+  }
+
   .fade-enter-active,
   .fade-leave-active {
     transition: opacity 0.5s;
