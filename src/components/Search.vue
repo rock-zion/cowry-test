@@ -21,6 +21,7 @@
           return this.$store.state.searchValue;
         },
         set(newSearchValue) {
+          this.$store.commit('setSearchValue', newSearchValue);
         },
       },
     },
