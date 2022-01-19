@@ -32,4 +32,43 @@
 </script>
 
 <style lang="scss" scoped>
+  .loading_wrapper,
+  .container {
+    width: 70%;
+    max-width: 1000px;
+    padding-top: 16px;
+    z-index: 450;
+    margin: -50px auto 100px auto;
+  }
+  .container {
+    height: fit-content;
+    columns: 4 200px;
+    column-gap: 32px;
+  }
+
+  @media (max-width: 600px) {
+    .container {
+      column-count: 1;
+      -webkit-column-count: 1;
+      -moz-column-count: 1;
+      display: flex;
+      flex-direction: column;
+    }
+  }
+
+  @media (max-width: 912px) {
+    .container {
+      column-count: 3;
+      -webkit-column-count: 3;
+      -moz-column-count: 3;
+      // display: flex;
+      // flex-direction: column;
+    }
+  }
+
+  .loading_wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    column-gap: 16px;
+  }
 </style>
