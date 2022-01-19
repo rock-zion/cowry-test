@@ -17,6 +17,10 @@ export default createStore({
       state.searchValue = newSearchValue;
     },
 
+    clearImageData(state) {
+      state.imageData = [];
+    },
+
   },
   actions: {
     async fetchSearch(context) {
