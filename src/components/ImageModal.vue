@@ -9,6 +9,11 @@
   import ProfileImage from './ProfileImage.vue';
   export default {
     name: 'ImageModal',
+    data() {
+      return {
+        imageObject: {},
+      };
+    },
     components: { ProfileImage },
   };
 </script>
