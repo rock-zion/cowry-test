@@ -1,10 +1,25 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <transition name="fade">
+    <ImageModal v-if="$store.state.displayModal" />
+  </transition>
+  <Header />
+  <div class="container_parent">
+    <GalleryContainer />
+  </div>
 </template>
 
 <script>
 import HelloWorld from './components/HelloWorld.vue'
+  import Header from './components/Header.vue';
+  import GalleryContainer from './components/GalleryContainer.vue';
+  import ImageModal from './components/ImageModal.vue';
+
+    components: {
+      Header,
+      GalleryContainer,
+      ImageModal,
+    },
+
 
 export default {
   name: 'App',
