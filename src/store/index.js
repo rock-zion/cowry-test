@@ -26,7 +26,6 @@ export default createStore({
     },
 
     updateSingleImageData(state, payload) {
-      console.log(payload);
       state.singleImageData = payload;
     },
 
