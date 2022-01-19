@@ -9,11 +9,12 @@
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
   import Header from './components/Header.vue';
   import GalleryContainer from './components/GalleryContainer.vue';
   import ImageModal from './components/ImageModal.vue';
 
+  export default {
+    name: 'App',
     components: {
       Header,
       GalleryContainer,
@@ -31,12 +32,6 @@ import HelloWorld from './components/HelloWorld.vue'
       },
     },
 
-export default {
-  name: 'App',
-  components: {
-    HelloWorld
-  }
-}
     mounted() {
       this.$store.dispatch('fetchSearch');
     },
@@ -63,15 +58,6 @@ export default {
   };
 </script>
 
-<style lang="scss">
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
 <style>
   * {
     margin: 0;
