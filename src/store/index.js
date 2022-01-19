@@ -15,6 +15,19 @@ export default createStore({
   mutations: {
   },
   actions: {
+    async fetchSearch(context) {
+      const { state } = context;
+      try {
+        const response = await HTTP.get(
+          `/search/photos?query=${state.searchValue}&per_page=${
+            state.per_page
+          }&page=${1}`
+        );
+      } catch (e) {
+        state.errors.push(e);
+      }
+    },
+
   },
   modules: {
   }
