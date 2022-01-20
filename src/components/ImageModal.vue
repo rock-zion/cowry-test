@@ -68,8 +68,8 @@
     justify-content: flex-start;
   }
 
-  .portrait_wrapper {
-    height: 80%;
+  .portrait_wrapper,
+  .landscape_wrapper {
     width: 100%;
     display: flex;
     justify-content: center;
@@ -77,10 +77,12 @@
     background: rgba($color: #000000, $alpha: 0.5);
   }
 
+  .portrait_wrapper {
+    height: 80%;
+  }
+
   .landscape_wrapper {
     height: 80%;
-    width: 100%;
-    overflow: hidden;
   }
 
   .landscape_image {
