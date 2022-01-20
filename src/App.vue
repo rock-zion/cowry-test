@@ -81,6 +81,8 @@
   .container_parent {
     width: 100%;
     position: relative;
+    display: flex;
+    justify-content: center;
   }
 
   .fade-enter-active,
