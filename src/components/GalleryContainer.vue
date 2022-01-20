@@ -1,7 +1,7 @@
 <template>
   <masonry
     :gutter="{ default: '30px', 700: '20px', 400: '0px' }"
-    :cols="{ default: 4, 1000: 3, 700: 2, 400: 1 }"
+    :cols="{ default: 3, 1000: 3, 700: 2, 400: 1 }"
     v-if="$store.state.imageData.length !== 0"
     class="container"
   >
@@ -41,6 +41,7 @@
   }
   .container {
     height: fit-content;
+    margin-top: -50px;
   }
 
   .container > div:not(:last-child) {
