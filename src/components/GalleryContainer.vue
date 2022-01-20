@@ -1,5 +1,10 @@
 <template>
-  <div v-if="$store.state.imageData.length !== 0" class="container">
+  <masonry
+    :gutter="{ default: '30px', 700: '20px', 400: '0px' }"
+    :cols="{ default: 4, 1000: 3, 700: 2, 400: 1 }"
+    v-if="$store.state.imageData.length !== 0"
+    class="container"
+  >
     <PictureThumbnail
       v-for="item in $store.state.imageData"
       v-bind:key="item?.id"
@@ -8,14 +13,9 @@
       :description="item?.alt_description"
       :img="item?.urls?.thumb"
       :data="item"
+      :loading="$store.state.loading"
     />
-  </div>
-
-  <div v-if="$store.state.loading" class="loading_wrapper">
-    <ThumbnailLoading />
-    <ThumbnailLoading />
-    <ThumbnailLoading />
-  </div>
+  </masonry>
 </template>
 
 <script>
@@ -38,32 +38,13 @@
     max-width: 1000px;
     padding-top: 16px;
     z-index: 450;
-    margin: -50px auto 100px auto;
   }
   .container {
     height: fit-content;
-    columns: 4 200px;
-    column-gap: 32px;
   }
 
-  @media (max-width: 600px) {
-    .container {
-      column-count: 1;
-      -webkit-column-count: 1;
-      -moz-column-count: 1;
-      display: flex;
-      flex-direction: column;
-    }
-  }
-
-  @media (max-width: 912px) {
-    .container {
-      column-count: 3;
-      -webkit-column-count: 3;
-      -moz-column-count: 3;
-      // display: flex;
-      // flex-direction: column;
-    }
+  .container > div:not(:last-child) {
+    margin-right: 20px;
   }
 
   .loading_wrapper {
