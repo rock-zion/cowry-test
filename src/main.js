@@ -1,5 +1,7 @@
-import { createApp } from 'vue'
-import App from './App.vue'
-import store from './store'
+import { createApp } from 'vue';
+import masonry from 'vue-next-masonry';
 
-createApp(App).use(store).mount('#app')
+import App from './App.vue';
+import store from './store';
+
+createApp(App).use(masonry).use(store).mount('#app');
